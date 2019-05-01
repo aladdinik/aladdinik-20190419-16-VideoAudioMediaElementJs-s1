@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><!-- video / audio / source-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+<!--    <link href="zIK/02css/aReset.css" rel="stylesheet" type="text/css">-->
+<!--    <link href="zIK/02css/hostingServices/normalize.css" rel="stylesheet" type="text/css">-->
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	
+    <link href="zIK/02css/oikGrid.css" rel="stylesheet" type="text/css">
+<!--    <link href="zIK/02css/oikFlex.css" rel="stylesheet" type="text/css">-->
+    <title>01 video / audio / source</title>
+<style>
+/* + + + + + + + + + + + + + STYLE -------------------------------*/
+/*-------------------------- /style //////////////////////////////*/
+</style>
+</head>
+<body>
+<main>
+<!--+ + + + + + + + + + + + + MAIN ------------------------------->
+
+<!--video-->
+	<video controls autoplay muted  class="w-50">        <!-- 1+ -->
+		<source src="http://treehouse-code-samples.s3.amazonaws.com/html-video-and-audio/bridge.mp4" type="video/mp4">              <!-- 2+ -->
+		<source src="http://treehouse-code-samples.s3.amazonaws.com/html-video-and-audio/bridge.ogg" type="video/ogg">              <!-- 3+ -->
+		Sorry, your browser doesn't support embedded videos. source:-mdn   <!-- 4+ -->
+	</video>
+	
+	<!--1+ autoplay will only work if you include muted also
+		1+ you could use <video> as src and type, since <source> is only if you want multiple format version.
+		2+ .mp4 version of the video
+  		3+ .ogg version of the video . all version help increase browser support
+  		4+ message will be shown if the no browser support for the video format-->
+
+
+<!--audio-->
+	<audio controls> 
+		<source src="http://treehouse-code-samples.s3.amazonaws.com/html-video-and-audio/bridge-audio.mp3" type="audio/mp3">
+		Your browser does not support the <code>audio</code> element.
+	</audio>
+	
+<!-------------------------- /main /////////////////////////////-->
+<script src="https://code.jquery.com/jquery-3.4.0.slim.min.js" integrity="sha256-ZaXnYkHGqIhqTbJ6MB4l9Frs/r7U4jlx7ir8PJYBqbI=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/popper.js@1.15.0/dist/umd/popper.min.js" type="text/javascript"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="zIK/03JS/kiK.js" type="text/javascript"></script>
+<script>
+/* + + + + + + + + + + + + + SCRIPT ------------------------------*/
+/*------------------------- /script /////////////////////////////*/
+// printD(html);
+// everyStyles(DOMelement);
+// ascii(a, b);
+// patternIndexNumber(theArrayz, searchThisValue);
+// cssSupport(cssProperty, cssValue);	
+</script>
+</main>
+</body>
+</html>

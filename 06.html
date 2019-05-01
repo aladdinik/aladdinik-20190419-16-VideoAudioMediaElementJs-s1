@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><!-- adding mediaelement.js plugins and using the plugins code-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+<!--    <link href="zIK/02css/aReset.css" rel="stylesheet" type="text/css">-->
+<!--    <link href="zIK/02css/hostingServices/normalize.css" rel="stylesheet" type="text/css">-->
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.10/mediaelementplayer.min.css" rel="stylesheet" type="text/css">
+	
+<!--	IK ADDING THE SPECIFIC PLUGIN .min.css FILE UNDER THE MAIN MEDIAELEMENT CSS FILE BUT STILL BEFORE YOU PERSONAL CSS FILE-->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement-plugins/2.5.0/skip-back/skip-back.min.css" rel="stylesheet" type="text/css">
+	
+    <link href="zIK/02css/oikGrid.css" rel="stylesheet" type="text/css">
+<!--    <link href="zIK/02css/oikFlex.css" rel="stylesheet" type="text/css">-->
+    <title>06 adding mediaelement.js plugins and using the plugins code</title>
+<style>
+/* + + + + + + + + + + + + + STYLE -------------------------------*/
+/*-------------------------- /style //////////////////////////////*/
+</style>
+</head>
+<body>
+<main>
+<!--+ + + + + + + + + + + + + MAIN ------------------------------->
+
+	<div class="w-75 hh">
+		<video id="ikvideo" class="w-100">
+			<source src="http://treehouse-code-samples.s3.amazonaws.com/html-video-and-audio/bridge.mp4" type="video/mp4">              
+			<source src="http://treehouse-code-samples.s3.amazonaws.com/html-video-and-audio/bridge.ogg" type="video/ogg">   
+			<track src="02ikCaptions.vtt" kind="captions" srclang="en" label="iK self note">        
+		</video>
+	</div>
+	
+<!-------------------------- /main /////////////////////////////-->
+<script src="https://code.jquery.com/jquery-3.4.0.slim.min.js" integrity="sha256-ZaXnYkHGqIhqTbJ6MB4l9Frs/r7U4jlx7ir8PJYBqbI=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/popper.js@1.15.0/dist/umd/popper.min.js" type="text/javascript"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.10/mediaelement-and-player.min.js" type="text/javascript"></script>
+	
+<!--	IK ADDING THE SPECIFIC PLUGIN .min.js FILE UNDER THE MAIN MEDIAELEMENT JS FILE BUT STILL BEFORE YOU PERSONAL JS FILE-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement-plugins/2.5.0/skip-back/skip-back.min.js" type="text/javascript"></script>
+
+<!--	IK ADDING THE SPECIFIC PLUGIN .i18n.js FILE UNDER THE PLUGIN .min.js FILE BUT STILL BEFORE YOU PERSONAL JS FILE-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement-plugins/2.5.0/skip-back/skip-back-i18n.js" type="text/javascript"></script>
+
+<script src="zIK/03JS/kiK.js" type="text/javascript"></script>
+<script>
+/* + + + + + + + + + + + + + SCRIPT ------------------------------*/
+	
+	new MediaElementPlayer(`ikvideo`, {                            /*1+*/
+		features: [`current`, `progress`, `duration`, `skipback`], /*2+*/
+		skipBackInterval: 3,                                       /*3+*/
+		skipBackText: `ik 3 seconds skipy`                         /*4+*/
+	});
+		/*1+ to show you do not have to use the const variable 
+		2+ `skipback` is a plugin features
+		2+ `skipback` would not have work if we did not add all the extra plugin stylesheet
+		3+ modify the skipback to 3sec instead of the default 10sec
+		4+ add a title to the skipback button
+		3+ & 4+ are from the skipback feature doc plugin page which gives you greater ability to customize */
+
+/*------------------------- /script /////////////////////////////*/
+// printD(html);
+// everyStyles(DOMelement);
+// ascii(a, b);
+// patternIndexNumber(theArrayz, searchThisValue);
+// cssSupport(cssProperty, cssValue);	
+</script>
+</main>
+</body>
+</html>
